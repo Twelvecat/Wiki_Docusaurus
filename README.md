@@ -1,4 +1,4 @@
 # TwelveCat's Wiki
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Twelvecat/Wiki_Docusaurus)
-![GitHub repo size](https://img.shields.io/github/repo-size/Twelvecat/Wiki_Docusaurus)
+[![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)
+[![GitHub last commit](https://badgen.net/github/last-commit/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus/commits/master)
