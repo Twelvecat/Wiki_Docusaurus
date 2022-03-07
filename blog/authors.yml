@@ -1,23 +1,11 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
-
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+Ebola:
+  name: Ebola
+  title: 三天打鱼，两天晒网
+  url: https://gitee.com/twelvecat
+  image_url: https://portrait.gitee.com/uploads/avatars/user/1846/5538863_twelvecat_1578988222.jpg!avatar200
 
 TwelveCat:
   name: TwelveCat
-  title: Up
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+  title: 专业摸鱼，业余更新
+  url: https://github.com/twelvecat
+  image_url: https://avatars.githubusercontent.com/u/42105401?v=4

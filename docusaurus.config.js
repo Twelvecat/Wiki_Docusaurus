@@ -17,6 +17,8 @@ const config = {
   // organizationName: 'facebook', // Usually your GitHub org/user name.
   // projectName: 'docusaurus', // Usually your repo name.
 
+
+  
   presets: [
     [
       'classic',
@@ -25,13 +27,21 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          sidebarCollapsible: true, //默认折叠
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editUrl: 'https://github.com/twelvecat/Wiki_Docusaurus/edit/master/',
         },
         blog: {
-          showReadingTime: true,
+          blogSidebarCount: 10,
+          postsPerPage: 10,
+          showReadingTime: false,
+          path: 'blog',
+          blogSidebarTitle: 'Recent',
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/twelvecat/Wiki_Docusaurus/edit/master/',
+            
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -67,7 +77,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'Home',
             position: 'right',
             label: 'Wiki',
           },
