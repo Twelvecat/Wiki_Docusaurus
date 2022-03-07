@@ -7,8 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "TwelveCat's Wiki",   // 站点名称
-  tagline: '^_^',  // 站点描述
-  url: 'https://wiki-docusaurus-blue.vercel.app', // GitHub 页面的 URL
+  tagline: '据说这是站点描述',  // 站点描述
+  url: 'https://github.com/Twelvecat/Wiki_Docusaurus', // GitHub 页面的 URL
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
