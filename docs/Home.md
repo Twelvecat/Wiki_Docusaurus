@@ -21,7 +21,6 @@ Hi~
 
 为了避免遗忘、便于分享，我在这里收录知识。  
 请随意浏览～
-这个功能好像是假的欸
 
 [![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)
 [![GitHub last commit](https://badgen.net/github/last-commit/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus/commits/master)
