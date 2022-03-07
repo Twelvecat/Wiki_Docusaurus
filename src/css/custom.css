@@ -5,26 +5,59 @@
  */
 
 /* You can override the default Infima variables here. */
+/* 主题色 */
 :root {
-  --ifm-color-primary: #2e8555;
+  /* --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary-lightest: #3cad6e; */
+  --ifm-color-primary: #DE82FF;
+  --ifm-color-primary-dark: #d27cf1;
+  --ifm-color-primary-darker: #bc70d8;
+  --ifm-color-primary-darkest: #aa65c4;
+  --ifm-color-primary-light: #e095fc;
+  --ifm-color-primary-lighter: #e7aafd;
+  --ifm-color-primary-lightest: #ebbafd;
   --ifm-code-font-size: 95%;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  /* --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary-lightest: #4fddbf; */
+  --ifm-color-primary: #FFB121;
+  --ifm-color-primary-dark: #f5aa1f;
+  --ifm-color-primary-darker: #e69f1d;
+  --ifm-color-primary-darkest: #d4941b;
+  --ifm-color-primary-light: #fdb42d;
+  --ifm-color-primary-lighter: #fcb83b;
+  --ifm-color-primary-lightest: #fcbc46;
+}
+
+/* 去掉侧边栏右侧的分割线 */
+.main-wrapper>div>div {
+	border-right: none !important;
+}
+
+/* 隐藏 scrollbar，也就是右边的那个滑动栏 */
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* 目录样式优化，也就是doc右边的大纲 */
+.table-of-contents .table-of-contents__link--active {
+	font-weight: var(--ifm-font-weight-semibold);
+	margin-left: -16px;
+	padding-left: 12px;
+	border-left: 4px solid var(--ifm-link-color);
 }
 
 .docusaurus-highlight-code-line {
