@@ -30,6 +30,7 @@ const config = {
           sidebarCollapsible: true, //默认折叠
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          routeBasePath: "/",
           editUrl: 'https://github.com/twelvecat/Wiki_Docusaurus/edit/master/',
         },
         blog: {
