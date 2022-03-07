@@ -8,9 +8,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: "TwelveCat's Wiki",   // 站点名称
   tagline: '^_^',  // 站点描述
-  url: 'https://github.com', // GitHub 页面的 URL
-  baseUrl: '/Twelvecat/Wiki_Docusaurus/',
-  onBrokenLinks: 'warn',  //这个是检测链接是否失效的，在这个地方报了bug
+  url: 'https://github.com/Twelvecat', // GitHub 页面的 URL
+  baseUrl: '/Wiki_Docusaurus/',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico', // 站点的图标
   organizationName: 'Twelvecat', // Usually your GitHub org/user name.
