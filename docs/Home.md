@@ -22,6 +22,18 @@ Hi~
 总是需要用输出倒逼输入的，不然总感觉学会了又好像没学会。  
 所见即所得，欢迎交流～
 
+**可能出现的功能：**
+- [ ] Blog 中引入多位作者
+- [ ] 将优秀的网站、工具列出来
+- [ ] 设立友链，收藏优秀 Blog
+- [ ] 撰写一些学习笔记
+- [ ] 增设全局搜索工具
+- [ ] 设计网站 logo
+- [ ] 解决公式渲染问题
+- [ ] 解决图床问题
+- [ ] 解决视频播放问题
+- [ ] ……
+
 [![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)
 [![GitHub last commit](https://badgen.net/github/last-commit/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus/commits/master)
 
