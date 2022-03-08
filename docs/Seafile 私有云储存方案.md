@@ -1,15 +1,13 @@
 ---
 id: Seafile 私有云储存方案
 title: Seafile 私有云储存方案
-# authors: TwelveCat
-# sidebar_label: Demo
-# sidebar_position: 2 #根据需求自己改，或者不写自动
+authors: TwelveCat
+sidebar_label: Seafile 私有云储存方案
+sidebar_position: 3 #根据需求自己改，或者不写自动
 ---
 
 :::caution
-
-这是一篇旧文，文章可能存在不合符个人文档写作规范的地方。
-
+这是一篇旧文，文章可能存在与 **[个人文档写作规范](./个人文档写作规范.md)** 相矛盾的地方。
 :::
 
 ## 1 方案选择
