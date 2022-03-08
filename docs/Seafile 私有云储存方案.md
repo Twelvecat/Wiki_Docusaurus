@@ -30,30 +30,26 @@ sidebar_position: 3 #根据需求自己改，或者不写自动
 
 Ubuntu 18.04 可从 [官网](https://ubuntu.com/download/desktop) 下载，下载下来会获得一个 `.iso` 镜像文件，可以使用各种工具烧录到U盘中，再安装到服务器的电脑里即可。具体实现方式多种多言，此处不展开进行对比。
 
-这里使用了BalenaEtchar进行烧录了，因为比较好看界面，ui是王道。
-<!-- 
-![image-20201109165023978](../images/Seafile%E7%A7%81%E6%9C%89%E4%BA%91%E5%82%A8%E5%AD%98%E6%96%B9%E6%A1%88-1-%E5%88%9D%E5%A7%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20201109165023978.png) -->
+这里使用了BalenaEtchar进行烧录了，单纯因为界面比较好看。
 
-简单完成烧录和系统安装后就可以开始操作了，但是由于使用的设备过老，作为台式服务器，并没有Linux下的无线网卡，这使得联网问题比较难以解决。我们采购了一个型号为TL-WN725N的无线网卡，但是也只是在Windows下免驱，这里需要寻求第三方方案进行解决。
+![balenaEtcher](./../static/img/Seafile/balenaEtcher.png)
 
-# 3 无线网卡驱动解决方案
+简单完成烧录和系统安装后就可以开始操作了，但是由于使用的设备过老，作为台式服务器，并没有 Linux 下的无线网卡，这使得联网问题比较难以解决。我们采购了一个型号为 TL-WN725N 的无线网卡，但是也只是在 Windows 下免驱，这里需要寻求第三方方案进行解决。
 
-主要参考Github上[此方案](https://github.com/brektrou/rtl8821CU)进行。其他类似资料也有不少，但是大都过老，并不支持内核5.X版本的Linux系统，此处先进行这个方案尝试。
+## 3 无线网卡驱动解决方案
 
-## 3.1 编译工具安装
+主要参考Github上 [此方案](https://github.com/brektrou/rtl8821CU) 进行。其他类似资料也有不少，但是大都过老，并不支持内核 5.X 版本的 Linux 系统，此处先进行这个方案尝试。
 
-编译此驱动需要安装以下工具``make gcc linux-header git``，由于主机没有网络，这里临时使用手机USB共享网络辅助安装，若又其他办法也可。
+### 3.1 编译工具安装
 
-这里用万年老代码更新一下
+编译此驱动需要安装以下工具``make gcc linux-header git``，由于主机没有网络，这里临时使用手机 USB 共享网络辅助安装，若又其他办法也可。
 
-```
+```bash
+# 这里用万年老代码更新一下
 sudo apt-get update
 sudo apt-get upgrade
-```
 
-然后依次安装以下依赖工具包
-
-```
+# 然后依次安装以下依赖工具包
 sudo apt-get install ubuntu-make
 sudo apt-get install git
 sudo apt install build-essential
@@ -62,57 +58,50 @@ sudo apt-get install linux-headers-$(uname -r)
 
 确定工具安装完毕后，可以进入到下一步。
 
-## 3.2 克隆仓库
+### 3.2 克隆仓库
 
 命令如下，直接操作，如果仓库地址更新，请联系原作者，或更改其他方案进行。
 
-```
+```bash
 mkdir -p ~/build
 cd ~/build
 git clone https://github.com/brektrou/rtl8821CU.git
 ```
 
-## 3.3 使用 DKMS 构建和安装(我用的3.4)
+### 3.3 使用 DKMS 构建和安装(我用的3.4)
 
 DKMS 是一个系统，当安装或更新新内核时，它会自动重新编译并安装内核模块。要使用 DKMS，请安装 dkms 包。
 
-使用如下命令安装：
-
-```
+```bash
+# 使用如下命令安装：
 sudo apt-get install dkms
-```
 
-要使用此项目的**DKMS**功能，只需运行：
-
-```
+#要使用此项目的**DKMS**功能，只需运行：
 ./dkms-install.sh
-```
 
-如果**以后**要删除它，请运行：
-
-```
+#如果**以后**要删除它，请运行：
 ./dkms-remove.sh
 ```
 
-### 将 USB-wifi 适配器插入电脑
+#### 将 USB-WiFi 适配器插入电脑
 
-如果可以检测到 wifi ，恭喜恭喜。如果没有，您可能需要通过终端中的以下步骤切换设备 usb 模式：
+如果可以检测到 WiFi，恭喜恭喜。如果没有，您可能需要通过终端中的以下步骤切换设备 USB 模式：
 
-1. 按类型查找 usb - wifi 适配器设备 ID，如"0bda：1a2b"：
+1. 按类型查找 usb - wifi 适配器设备 ID，如"0bda:1a2b":
 2. 按类型切换模式：（设备 ID 必须为你的）
 
-```
+```bash
 sudo usb_modeswitch -KW -v 0bda -p 1a2b
 systemctl start bluetooth.service - starting Bluetooth service if it's in inactive state
 ```
 
-### 使其永久化
+#### 使其永久化
 
-如果上述步骤工作正常，为了避免定期不得不使你可以使它永久 （在**Ubuntu 18.04 LTS 工作**）：`usb_modeswitch`
+如果上述步骤工作正常，为了避免定期不得不使你可以使它永久（**在 Ubuntu 18.04 LTS 工作**）：`usb_modeswitch`
 
 1. 编辑规则：`usb_modeswitch`
 
-   ```
+   ```bash
    sudo nano /lib/udev/rules.d/40-usb_modeswitch.rules
    ```
 
@@ -123,40 +112,37 @@ systemctl start bluetooth.service - starting Bluetooth service if it's in inacti
    ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/sbin/usb_modeswitch -K -v 0bda -p 1a2b"
    ```
 
-## 3.4 无需 DKMS 即可构建和安装（我又失败了）
+### 3.4 无需 DKMS 即可构建和安装（失败了）
 
 使用以下命令：
 
-```
+```bash
 cd ~/build/rtl8821CU
 make
 sudo make install
-```
 
-如果你**以后**要移除，这样执行：
-
-```
+#如果你以后要移除，这样执行：
 cd ~/build/rtl8821CU
 sudo make uninstall
 ```
 
-## 3.5 检查一下安装的设备（我懒得翻译了）
+### 3.5 检查一下安装的设备（懒得翻译了）
 
 If you successfully install the driver, the driver is installed on . Check the driver with the command:`/lib/modules/<linux version>/kernel/drivers/net/wireless/realtek/rtl8821cu``ls`
 
-```
+```bash
 ls /lib/modules/$(uname -r)/kernel/drivers/net/wireless/realtek/rtl8821cu
 ```
 
-Make sure file present on that directory`8821cu.ko`
+Make sure file present on that directory `8821cu.ko`
 
-### Check with **DKMS** (if installing via **DKMS**):
+#### Check with **DKMS** (if installing via **DKMS**):
 
-```
+```bash
 sudo dkms status
 ```
 
-### ARM architecture tweak for this driver (this solves compilation problem of this driver):
+#### ARM architecture tweak for this driver (this solves compilation problem of this driver):
 
 ```
 # For AArch32
@@ -169,20 +155,19 @@ sudo cp /lib/modules/$(uname -r)/build/arch/arm64/Makefile /lib/modules/$(uname 
 sudo sed -i 's/-mgeneral-regs-only//' /lib/modules/$(uname -r)/build/arch/arm64/Makefile
 ```
 
-### Monitor mode
+#### Monitor mode
 
 Use the tool 'iw', please don't use other tools like 'airmon-ng'
 
-```
+```bash
 iw dev wlan0 set monitor none
 ```
 
-## 3.6 使用13年的驱动试试看（是的我还失败了）
+### 3.6 使用 2013 年的驱动试试看（我还是失败了）
 
-## 3.7 充钱是最好的解决办法（真香）
+### 3.7 充钱是最好的解决办法（真香）
 
-emm，在多种方案尝试下，发现了还是直接买一个最简单，最香。主要是由于我们使用的TPwn725n看似有很多方案，但是实际上其设备ID对应的是rtl8188GU芯片。此芯片恰好没有对应的Liunx驱动，也无人编译进行Linux下移植，网上流传的方案均为rtl8188eu/cu芯片，虽然有人成功了，但是信号也并不完美。并且
-
+Emm，在多种方案尝试下，发现了还是直接买一个最简单，真香。主要是由于我们使用的 TL-WN725N 看似有很多方案，但是实际上其设备 ID 对应的是 RTL8188GU 芯片。此芯片恰好没有对应的 Liunx 驱动，也无人编译进行 Linux 下移植，网上流传的方案均为 RTL8188EU/CU 芯片，虽然有人成功了，但是信号效果也并不佳。所以，充钱吧。
 
 
 > 文章作者：**TwelveCat**  
