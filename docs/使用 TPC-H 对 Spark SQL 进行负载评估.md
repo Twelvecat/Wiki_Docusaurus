@@ -335,7 +335,7 @@ Time taken: 0.435 seconds, Fetched 8 row(s)
 
 ```sql
 l_shipdate <= date '1998-12-01' - interval '90' day (3)
--- 则直人工代为计算，修改为：
+-- 则值人工代为计算，修改为：
 l_shipdate <= date '1998-9-02'
 ```
 
