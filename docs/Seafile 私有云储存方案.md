@@ -1,8 +1,8 @@
 ---
 id: Seafile 私有云储存方案
-title: Seafile 私有云储存方案
+title: 🚧Seafile 私有云储存方案
 authors: TwelveCat
-sidebar_label: Seafile 私有云储存方案
+sidebar_label: 🚧Seafile 私有云储存方案
 sidebar_position: 3 #根据需求自己改，或者不写自动
 ---
 
@@ -169,6 +169,7 @@ iw dev wlan0 set monitor none
 
 Emm，在多种方案尝试下，发现了还是直接买一个最简单，真香。主要是由于我们使用的 TL-WN725N 看似有很多方案，但是实际上其设备 ID 对应的是 RTL8188GU 芯片。此芯片恰好没有对应的 Liunx 驱动，也无人编译进行 Linux 下移植，网上流传的方案均为 RTL8188EU/CU 芯片，虽然有人成功了，但是信号效果也并不佳。所以，充钱吧。
 
+**（未完成）**
 
 > 文章作者：**TwelveCat**  
 > 原文地址：<https://wiki.twelvecat.com>  
