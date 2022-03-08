@@ -17,10 +17,10 @@ sidebar_position: 1
 
 
 Hi~  
-这已经不知道是我的第几个Wiki/Blog，但它是最新的。
+这已经不知道是我的第几个 Wiki/Blog，但它是最新的，希望能成为最久的吧。
 
 总是需要用输出倒逼输入的，不然总感觉学会了又好像没学会。  
-所见即所得，内容完全开源，欢迎交流～
+所见即所得，欢迎交流～
 
 [![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)
 [![GitHub last commit](https://badgen.net/github/last-commit/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus/commits/master)
