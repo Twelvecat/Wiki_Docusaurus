@@ -32,6 +32,7 @@ Hi~
 - [ ] 解决公式渲染问题
 - [ ] 解决图床问题
 - [ ] 解决视频播放问题
+- [ ] 增收侧边栏收缩功能
 - [ ] ……
 
 [![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)

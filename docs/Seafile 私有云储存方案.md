@@ -173,4 +173,4 @@ Emm，在多种方案尝试下，发现了还是直接买一个最简单，真�
 
 > 文章作者：**TwelveCat**  
 > 原文地址：<https://wiki.twelvecat.com>  
-> 版权声明：文章采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议，转载请注明出处。
+> 版权声明：文章采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/deed.zhe) 协议，转载请注明出处。
