@@ -33,7 +33,7 @@ Hi~
 - [ ] 解决图床问题
 - [ ] 解决视频播放问题
 - [ ] 增收侧边栏收缩功能
-- [ ] ……
+- [ ] 增加跨设备更新
 
 [![GitHub watchers](https://badgen.net/github/watchers/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus)
 [![GitHub last commit](https://badgen.net/github/last-commit/Twelvecat/Wiki_Docusaurus)](https://github.com/Twelvecat/Wiki_Docusaurus/commits/master)
