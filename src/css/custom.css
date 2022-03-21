@@ -70,3 +70,20 @@
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Algolia搜索样式优化（去掉 Ctrl + K） */
+/* .DocSearch-Button-Key {
+  display: none !important;
+} */
+
+/* Smooth Scroll 顺滑跳转到某位置 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 文字选取颜色 */
+::selection {
+  background: rgb(176, 251, 233);
+  color: black;
+}
+

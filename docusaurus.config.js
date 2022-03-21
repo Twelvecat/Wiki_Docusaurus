@@ -63,6 +63,30 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      //搜索框
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'XXMM3559UU',
+  
+        // Public API key: it is safe to commit it
+        apiKey: '446da979f11003b87220afb0ccb10108',
+  
+        indexName: 'twelvecat',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // Optional: Algolia search parameters
+        searchParameters: {},
+  
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+  
+        //... other Algolia params
+      },
       //公告栏
       // announcementBar: {
       //   id: 'announcement-bar',
