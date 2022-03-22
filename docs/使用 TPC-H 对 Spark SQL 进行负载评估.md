@@ -348,4 +348,4 @@ spark-SQL -f ./5_SQL\ Code/1.SQL
 
 > 文章作者：**TwelveCat**  
 > 原文地址：<https://wiki.twelvecat.com>  
-> 版权声明：文章采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议，转载请注明出处。
+> 版权声明：文章采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 协议，转载请注明出处。
