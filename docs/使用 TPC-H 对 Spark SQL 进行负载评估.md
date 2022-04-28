@@ -58,7 +58,7 @@ TPC 全称为 Transaction Processing Performance Council，即「事务处理性
 
 ### 4.1 生成 dbgen.exe 与 qgen.exe
 
-为了生成测试数据，需要先对工程进行编译，以生成一个 `.exe` 文件后再进一步操作。官方提供的 **移植方案**（`./2_Windows Compiled version/dbgen/PORTING.NOTES`） 一直在强调修改 Makefile 文件进行不同环境的移植以便编译，但是使用VS进行编译并不涉及到 Makefile 文件，相关的配置修改需要在项目设置中调整，具体的配置页面图如下图所示。Windows 编译的移植主要修改 **`SQLSERVER`** 这个参数，将其修改为我们所使用的数据库 **`SPARKSQL`**。
+为了生成测试数据，需要先对工程进行编译，以生成一个 `.exe` 文件后再进一步操作。官方提供的 **移植方案**（`./2_Windows Compiled version/dbgen/PORTING.NOTES`） 一直在强调修改 Makefile 文件进行不同环境的移植以便编译，但是使用VS进行编译并不涉及 Makefile 文件，相关的配置修改需要在项目设置中调整，具体的配置页面图如下图所示。Windows 编译的移植主要修改 **`SQLSERVER`** 这个参数，将其修改为我们所使用的数据库 **`SPARKSQL`**。
 
 ![windows_define_DBBASE](./../static/img/TPC-H_SparkSQL/windows_define_DBBASE.jpg)
 
